@@ -62,7 +62,7 @@ We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified
 
 ## Right to left support
 
-For adding a right to left support just change the definition of the variable $rtl to true in the file (`_custom.scss"`) re-compile and that's it. your framework is now supporting right to left directions.
+For adding a right to left support just change the definition of the variable $rtl to true in the file (`_custom.scss`) re-compile and that's it. your framework is now supporting right to left directions.
 
 ## Bugs and feature requests
 
