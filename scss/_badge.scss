@@ -43,8 +43,8 @@ a.badge {
 // Make them extra rounded with a modifier to replace v3's badges.
 
 .badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
+  padding-#{$direction_2}: $badge-pill-padding-x;
+  padding-#{$direction_1}: $badge-pill-padding-x;
   @include border-radius($badge-pill-border-radius);
 }
 

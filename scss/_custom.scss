@@ -2,3 +2,11 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+$rtl : false !default;
+$direction_1: left !default;
+$direction_2: right !default;
+@if $rtl {
+	$direction_1: right;
+	$direction_2: left;
+}

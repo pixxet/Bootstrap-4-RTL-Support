@@ -20,25 +20,25 @@
 
     .tooltip-inner::before {
       bottom: 0;
-      left: 50%;
-      margin-left: -$tooltip-arrow-width;
+      #{$direction_1}: 50%;
+      margin-#{$direction_1}: -$tooltip-arrow-width;
       content: "";
       border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
       border-top-color: $tooltip-arrow-color;
     }
   }
-  &.tooltip-right,
-  &.bs-tether-element-attached-left {
+  &.tooltip-#{$direction_2},
+  &.bs-tether-element-attached-#{$direction_1} {
     padding: 0 $tooltip-arrow-width;
-    margin-left: $tooltip-margin;
+    margin-#{$direction_1}: $tooltip-margin;
 
     .tooltip-inner::before {
       top: 50%;
-      left: 0;
+      #{$direction_1}: 0;
       margin-top: -$tooltip-arrow-width;
       content: "";
       border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
-      border-right-color: $tooltip-arrow-color;
+      border-#{$direction_2}-color: $tooltip-arrow-color;
     }
   }
   &.tooltip-bottom,
@@ -48,25 +48,25 @@
 
     .tooltip-inner::before {
       top: 0;
-      left: 50%;
-      margin-left: -$tooltip-arrow-width;
+      #{$direction_1}: 50%;
+      margin-#{$direction_1}: -$tooltip-arrow-width;
       content: "";
       border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
       border-bottom-color: $tooltip-arrow-color;
     }
   }
-  &.tooltip-left,
-  &.bs-tether-element-attached-right {
+  &.tooltip-#{$direction_1},
+  &.bs-tether-element-attached-#{$direction_2} {
     padding: 0 $tooltip-arrow-width;
-    margin-left: -$tooltip-margin;
+    margin-#{$direction_1}: -$tooltip-margin;
 
     .tooltip-inner::before {
       top: 50%;
-      right: 0;
+      #{$direction_2}: 0;
       margin-top: -$tooltip-arrow-width;
       content: "";
       border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
-      border-left-color: $tooltip-arrow-color;
+      border-#{$direction_1}-color: $tooltip-arrow-color;
     }
   }
 }

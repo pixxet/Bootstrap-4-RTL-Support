@@ -1,7 +1,7 @@
 // scss-lint:disable PropertyCount
 
 // Embedded icons from Open Iconic.
-// Released under MIT and copyright 2014 Waybury.
+// Released under MIT and copy#{$direction_2} 2014 Waybury.
 // https://useiconic.com/open
 
 
@@ -13,11 +13,11 @@
   position: relative;
   display: inline-block;
   min-height: (1rem * $line-height-base);
-  padding-left: $custom-control-gutter;
+  padding-#{$direction_1}: $custom-control-gutter;
   cursor: pointer;
 
   + .custom-control {
-    margin-left: $custom-control-spacer-x;
+    margin-#{$direction_1}: $custom-control-spacer-x;
   }
 }
 
@@ -63,7 +63,7 @@
 .custom-control-indicator {
   position: absolute;
   top: (($line-height-base - $custom-control-indicator-size) / 2);
-  left: 0;
+  #{$direction_1}: 0;
   display: block;
   width: $custom-control-indicator-size;
   height: $custom-control-indicator-size;
@@ -118,11 +118,11 @@
 
 .custom-controls-stacked {
   .custom-control {
-    float: left;
-    clear: left;
+    float: #{$direction_1};
+    clear: #{$direction_1};
 
     + .custom-control {
-      margin-left: 0;
+      margin-#{$direction_1}: 0;
     }
   }
 }
@@ -141,10 +141,10 @@
   $select-border-width: ($border-width * 2);
   height: calc(#{$input-height} - #{$select-border-width});
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
-  padding-right: $custom-select-padding-x \9;
+  padding-#{$direction_2}: $custom-select-padding-x \9;
   color: $custom-select-color;
   vertical-align: middle;
-  background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+  background: $custom-select-bg $custom-select-indicator no-repeat #{$direction_2} $custom-select-padding-x center;
   background-image: none \9;
   background-size: $custom-select-bg-size;
   border: $custom-select-border-width solid $custom-select-border-color;
@@ -221,8 +221,8 @@
 .custom-file-control {
   position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
+  #{$direction_2}: 0;
+  #{$direction_1}: 0;
   z-index: 5;
   height: $custom-file-height;
   padding: $custom-file-padding-x $custom-file-padding-y;
@@ -243,7 +243,7 @@
   &::before {
     position: absolute;
     top: -$custom-file-border-width;
-    right: -$custom-file-border-width;
+    #{$direction_2}: -$custom-file-border-width;
     bottom: -$custom-file-border-width;
     z-index: 6;
     display: block;

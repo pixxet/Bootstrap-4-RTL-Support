@@ -32,8 +32,8 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
-  right: 0;
-  left: 0;
+  #{$direction_2}: 0;
+  #{$direction_1}: 0;
   z-index: $zindex-navbar-fixed;
 
   // Undo the rounded corners
@@ -68,10 +68,10 @@
 //
 
 .navbar-brand {
-  float: left;
+  float: #{$direction_1};
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin-right: 1rem;
+  margin-#{$direction_2}: 1rem;
   font-size: $font-size-lg;
   line-height: inherit;
 
@@ -82,12 +82,12 @@
 
 
 .navbar-divider {
-  float: left;
+  float: #{$direction_1};
   width: $border-width;
   padding-top: $navbar-divider-padding-y;
   padding-bottom: $navbar-divider-padding-y;
-  margin-right: $navbar-padding-x;
-  margin-left:  $navbar-padding-x;
+  margin-#{$direction_2}: $navbar-padding-x;
+  margin-#{$direction_1}:  $navbar-padding-x;
   overflow: hidden;
 
   &::before {
@@ -141,7 +141,7 @@
           display: block;
           float: none;
           margin-top: .5rem;
-          margin-right: 0;
+          margin-#{$direction_2}: 0;
         }
 
         .navbar-nav {
@@ -170,7 +170,7 @@
 
 .navbar-nav {
   .nav-item {
-    float: left;
+    float: #{$direction_1};
   }
 
   .nav-link {
@@ -179,12 +179,12 @@
     padding-bottom: .425rem;
 
     + .nav-link {
-      margin-left: 1rem;
+      margin-#{$direction_1}: 1rem;
     }
   }
 
   .nav-item + .nav-item {
-    margin-left: 1rem;
+    margin-#{$direction_1}: 1rem;
   }
 }
 
@@ -287,7 +287,7 @@
     @include media-breakpoint-down(xs) {
       .navbar-nav .nav-item {
         float: none;
-        margin-left: 0;
+        margin-#{$direction_1}: 0;
       }
     }
     @include media-breakpoint-up(sm) {
@@ -300,7 +300,7 @@
     @include media-breakpoint-down(sm) {
       .navbar-nav .nav-item {
         float: none;
-        margin-left: 0;
+        margin-#{$direction_1}: 0;
       }
     }
     @include media-breakpoint-up(md) {
@@ -313,7 +313,7 @@
     @include media-breakpoint-down(md) {
       .navbar-nav .nav-item {
         float: none;
-        margin-left: 0;
+        margin-#{$direction_1}: 0;
       }
     }
     @include media-breakpoint-up(lg) {

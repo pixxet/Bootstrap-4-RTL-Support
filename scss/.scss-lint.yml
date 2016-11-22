@@ -143,9 +143,9 @@ linters:
     order:
       - position
       - top
-      - right
+      - #{$direction_2}
       - bottom
-      - left
+      - #{$direction_1}
       - z-index
       - -webkit-box-sizing
       - -moz-box-sizing
@@ -169,14 +169,14 @@ linters:
       - max-height
       - padding
       - padding-top
-      - padding-right
+      - padding-#{$direction_2}
       - padding-bottom
-      - padding-left
+      - padding-#{$direction_1}
       - margin
       - margin-top
-      - margin-right
+      - margin-#{$direction_2}
       - margin-bottom
-      - margin-left
+      - margin-#{$direction_1}
       - overflow
       - overflow-x
       - overflow-y
@@ -265,9 +265,9 @@ linters:
       - user-select
       - nav-index
       - nav-up
-      - nav-right
+      - nav-#{$direction_2}
       - nav-down
-      - nav-left
+      - nav-#{$direction_1}
       - background
       - background-color
       - background-image
@@ -296,23 +296,23 @@ linters:
       - border-top-color
       - border-top-style
       - border-top-width
-      - border-right
-      - border-right-color
-      - border-right-style
-      - border-right-width
+      - border-#{$direction_2}
+      - border-#{$direction_2}-color
+      - border-#{$direction_2}-style
+      - border-#{$direction_2}-width
       - border-bottom
       - border-bottom-color
       - border-bottom-style
       - border-bottom-width
-      - border-left
-      - border-left-color
-      - border-left-style
-      - border-left-width
+      - border-#{$direction_1}
+      - border-#{$direction_1}-color
+      - border-#{$direction_1}-style
+      - border-#{$direction_1}-width
       - border-radius
-      - border-top-left-radius
-      - border-top-right-radius
-      - border-bottom-right-radius
-      - border-bottom-left-radius
+      - border-top-#{$direction_1}-radius
+      - border-top-#{$direction_2}-radius
+      - border-bottom-#{$direction_2}-radius
+      - border-bottom-#{$direction_1}-radius
       - -webkit-border-image
       - -moz-border-image
       - -o-border-image

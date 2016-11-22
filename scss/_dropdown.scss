@@ -10,12 +10,12 @@
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: $caret-width;
+    margin-#{$direction_1}: $caret-width;
     vertical-align: middle;
     content: "";
     border-top: $caret-width solid;
-    border-right: $caret-width solid transparent;
-    border-left: $caret-width solid transparent;
+    border-#{$direction_2}: $caret-width solid transparent;
+    border-#{$direction_1}: $caret-width solid transparent;
   }
 
   // Prevent the focus on the dropdown toggle when closing dropdowns
@@ -37,16 +37,16 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  #{$direction_1}: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
-  float: left;
+  float: #{$direction_1};
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-margin-top 0 0; // override default ul
   font-size: $font-size-base;
   color: $body-color;
-  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  text-align: #{$direction_1}; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
@@ -127,14 +127,14 @@
 //
 // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
 // menu with the parent.
-.dropdown-menu-right {
-  right: 0;
-  left: auto; // Reset the default from `.dropdown-menu`
+.dropdown-menu-#{$direction_2} {
+  #{$direction_2}: 0;
+  #{$direction_1}: auto; // Reset the default from `.dropdown-menu`
 }
 
-.dropdown-menu-left {
-  right: auto;
-  left: 0;
+.dropdown-menu-#{$direction_1} {
+  #{$direction_2}: auto;
+  #{$direction_1}: 0;
 }
 
 // Dropdown section headers
@@ -151,9 +151,9 @@
 .dropdown-backdrop {
   position: fixed;
   top: 0;
-  right: 0;
+  #{$direction_2}: 0;
   bottom: 0;
-  left: 0;
+  #{$direction_1}: 0;
   z-index: $zindex-dropdown-backdrop;
 }
 

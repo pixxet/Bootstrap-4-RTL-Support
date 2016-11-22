@@ -19,8 +19,8 @@
   .media-body {
     width: 10000px;
   }
-  .media-left,
-  .media-right,
+  .media-#{$direction_1},
+  .media-#{$direction_2},
   .media-body {
     display: table-cell;
     vertical-align: top;
@@ -52,12 +52,12 @@
 // Alignment
 //
 
-.media-right {
-  padding-left: $media-alignment-padding-x;
+.media-#{$direction_2} {
+  padding-#{$direction_1}: $media-alignment-padding-x;
 }
 
-.media-left {
-  padding-right: $media-alignment-padding-x;
+.media-#{$direction_1} {
+  padding-#{$direction_2}: $media-alignment-padding-x;
 }
 
 
@@ -76,6 +76,6 @@
 //
 
 .media-list {
-  padding-left: 0;
+  padding-#{$direction_1}: 0;
   list-style: none;
 }

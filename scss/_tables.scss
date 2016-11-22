@@ -155,7 +155,7 @@
 
 .table-reflow {
   thead {
-    float: left;
+    float: #{$direction_1};
   }
 
   tbody {
@@ -166,10 +166,10 @@
   th,
   td {
     border-top: $table-border-width solid $table-border-color;
-    border-left: $table-border-width solid $table-border-color;
+    border-#{$direction_1}: $table-border-width solid $table-border-color;
 
     &:last-child {
-      border-right: $table-border-width solid $table-border-color;
+      border-#{$direction_2}: $table-border-width solid $table-border-color;
     }
   }
 
@@ -185,7 +185,7 @@
   }
 
   tr {
-    float: left;
+    float: #{$direction_1};
 
     th,
     td {

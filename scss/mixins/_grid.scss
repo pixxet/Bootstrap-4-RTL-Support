@@ -3,8 +3,8 @@
 // Generate semantic grid columns with these mixins.
 
 @mixin make-container($gutters: $grid-gutter-widths) {
-  margin-left: auto;
-  margin-right: auto;
+  margin-#{$direction_1}: auto;
+  margin-#{$direction_2}: auto;
   @if not $enable-flex {
     @include clearfix();
   }
@@ -12,8 +12,8 @@
   @each $breakpoint in map-keys($gutters) {
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
+      padding-#{$direction_2}: ($gutter / 2);
+      padding-#{$direction_1}:  ($gutter / 2);
     }
   }
 }
@@ -33,8 +33,8 @@
   @each $breakpoint in map-keys($gutters) {
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
+      padding-#{$direction_2}: ($gutter / 2);
+      padding-#{$direction_1}:  ($gutter / 2);
     }
   }
 }
@@ -50,8 +50,8 @@
   @each $breakpoint in map-keys($gutters) {
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      margin-right: ($gutter / -2);
-      margin-left:  ($gutter / -2);
+      margin-#{$direction_2}: ($gutter / -2);
+      margin-#{$direction_1}:  ($gutter / -2);
     }
   }
 }
@@ -70,8 +70,8 @@
   @each $breakpoint in map-keys($gutters) {
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
+      padding-#{$direction_2}: ($gutter / 2);
+      padding-#{$direction_1}:  ($gutter / 2);
     }
   }
 }
@@ -84,21 +84,21 @@
     // do not appear to require this.
     max-width: percentage($size / $columns);
   } @else {
-    float: left;
+    float: #{$direction_1};
     width: percentage($size / $columns);
   }
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-  margin-left: percentage($size / $columns);
+  margin-#{$direction_1}: percentage($size / $columns);
 }
 
 @mixin make-col-push($size, $columns: $grid-columns) {
-  left: if($size > 0, percentage($size / $columns), auto);
+  #{$direction_1}: if($size > 0, percentage($size / $columns), auto);
 }
 
 @mixin make-col-pull($size, $columns: $grid-columns) {
-  right: if($size > 0, percentage($size / $columns), auto);
+  #{$direction_2}: if($size > 0, percentage($size / $columns), auto);
 }
 
 @mixin make-col-modifier($type, $size, $columns) {

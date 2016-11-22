@@ -13,9 +13,9 @@
 .modal {
   position: fixed;
   top: 0;
-  right: 0;
+  #{$direction_2}: 0;
   bottom: 0;
-  left: 0;
+  #{$direction_1}: 0;
   z-index: $zindex-modal;
   display: none;
   overflow: hidden;
@@ -61,9 +61,9 @@
 .modal-backdrop {
   position: fixed;
   top: 0;
-  right: 0;
+  #{$direction_2}: 0;
   bottom: 0;
-  left: 0;
+  #{$direction_1}: 0;
   z-index: $zindex-modal-backdrop;
   background-color: $modal-backdrop-bg;
 
@@ -100,7 +100,7 @@
 // Footer (for actions)
 .modal-footer {
   padding: $modal-inner-padding;
-  text-align: right; // right align buttons
+  text-align: #{$direction_2}; // #{$direction_2} align buttons
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
   @include clearfix(); // clear it in case folks use .pull-* classes on buttons
 }
